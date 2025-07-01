@@ -11,24 +11,24 @@ def calculadora(num1: float, num2: float, operador: str) -> float:
     
     if operador == '+':
         result = num1 + num2
-        print('----------------------------------\n')
-        print(f"{num1} + {num2} = {result}")
+        print(f"\n{num1} + {num2} = {result}")
+        print('----------------------------------')
     elif operador == '-':
         result = num1 - num2
-        print('----------------------------------\n')
-        print(f"{num1} - {num2} = {result}")    
+        print(f"\n{num1} - {num2} = {result}")
+        print('----------------------------------')    
     elif operador == '*':
         result = num1 * num2
-        print('----------------------------------\n')
-        print(f"{num1} x {num2} = {result}")
+        print(f"\n{num1} x {num2} = {result}")
+        print('----------------------------------')
     elif operador == '/':
         result = num1 / num2
-        print('----------------------------------\n')
-        print(f"{num1} ÷ {num2} = {result}")
+        print(f"\n{num1} ÷ {num2} = {result}")
+        print('----------------------------------')
     elif operador == '^':
         result = num1 ** num2
-        print('----------------------------------\n')
-        print(f"{num1}^{num2} = {result}")          
+        print(f"\n{num1}^{num2} = {result}")
+        print('----------------------------------')          
                 
     return result
 
@@ -39,44 +39,44 @@ if __name__ == "__main__":
         os.system('cls' if os.name == 'nt' else 'clear')
         try:
             print('Calculadora')
-            print('----------------------------------\n')
+            print('----------------------------------')
             while True:
-                selecao = input("Operações disponíveis: \n Soma (+) \n Subtração (-) \n Multiplicação (*) \n Divisão (/) \n Exponenciação (^) \n Introduza o operador da conta que pretende fazer: ") 
+                selecao = input("Operações disponíveis: \n\n Soma (+) \n Subtração (-) \n Multiplicação (*) \n Divisão (/) \n Exponenciação (^) \n\n Introduza o operador da conta que pretende fazer: ") 
 
                 if selecao == "+":
-                    print('----------------------------------\n')
+                    print('----------------------------------')
                     num1 = float(input("Introduza o primeiro número: "))
                     num2 = float(input("Introduza o segundo número: "))
                     operador = selecao
                     calculadora(num1, num2, operador)
                 elif selecao == "-":
-                    print('----------------------------------\n')
+                    print('----------------------------------')
                     num1 = float(input("Introduza o primeiro número: "))
                     num2 = float(input("Introduza o segundo número: "))
                     operador = selecao
                     calculadora(num1, num2, operador)
                 elif selecao == "*":
-                    print('----------------------------------\n')
+                    print('----------------------------------')
                     num1 = float(input("Introduza o primeiro número: "))
                     num2 = float(input("Introduza o segundo número: "))
                     operador = selecao
                     calculadora(num1, num2, operador)                                        
                 elif selecao == "/":
-                    print('----------------------------------\n')
+                    print('----------------------------------')
                     num1 = float(input("Introduza o primeiro número: "))
                     num2 = float(input("Introduza o segundo número: "))
                     operador = selecao
                     calculadora(num1, num2, operador)
                 elif selecao == "^":
-                    print('----------------------------------\n')
+                    print('----------------------------------')
                     num1 = float(input("Introduza o primeiro número: "))
                     num2 = float(input("Introduza o segundo número: "))
                     operador = selecao
                     calculadora(num1, num2, operador)
                 else:
-                    print("Operação inválida.")                                            
-
-
+                    print('----------------------------------')
+                    print("Operação inválida.")
+                    print('----------------------------------')                                                                    
         except ValueError:
             print('Dados inválidos! -> Tente novamente!')
             time.sleep(2)
@@ -84,5 +84,12 @@ if __name__ == "__main__":
         except ZeroDivisionError:
             print('Impossível dividir por zero! -> Tente novamente!')
             time.sleep(2)
-
+            
+        encerro = input("Pretende efetuar outras operações? (S/N): ").lower()
+            
+        if encerro == "s":
+            print("A resumir o programa.")
+        else:
+            break
+            
     print('\nVolte sempre!\n')
