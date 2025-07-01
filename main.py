@@ -13,7 +13,7 @@ def calculadora(num1: float, num2: float, operador: str) -> float:
         result = num1 + num2
     elif operador == '-':
         result = num1 - num2    
-    elif operador == 'x':
+    elif operador == '*':
         result = num1 * num2
     elif operador == '/':
         result = num1 / num2
@@ -30,7 +30,16 @@ if __name__ == "__main__":
         try:
             print('Calculadora')
             print('----------------------------------\n')
+            while True:
+                selecao = input("Operações disponíveis: \n Adição (+) \n Subtração (-) \n Multiplicação (*) \n Divisão (/) \n Exponenciação (^) \n Introduza o operador da conta que pretende fazer: ") 
 
+                if selecao == "+":
+                    print('----------------------------------\n')
+                    num1 = int(input("Introduza o primeiro número: "))
+                    num2 = int(input("Introduza o segundo número: "))
+                    operador = "+"
+                    calculadora(num1, num2, operador)
+                    
 
 
         except ValueError:
